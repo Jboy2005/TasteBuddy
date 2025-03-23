@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('menu.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 0,5s ease-in-out;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    animation: slideDown 1s ease-in-out;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ff5733;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff5733;
+}
+
+/* Menu Section */
+.menu {
+    margin-top: 100px;
+    padding: 50px 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+h2 {
+    font-size: 2em;
+    color: #f84017;
+    margin-top: -50px;
+}
+
+/* Popular Dishes */
+.menu-container, .menus-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-item, .menus-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item img, .menus-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover, .menus-item:hover {
+    transform: scale(1.05);
+}
+
+/* Order Button */
+.order-btn {
+    margin-top: 10px;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff5733, #ff1e00);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.order-btn:hover {
+    transform: scale(1.07);
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+/* Full Menu Section */
+.all-menu-container {
+    margin-top: 50px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    font-size: 1em;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-container, .menus-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item, .menus-item {
+        width: 80%;
+    }
+}
